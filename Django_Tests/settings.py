@@ -1,3 +1,4 @@
+# coding: utf-8
 """
 Django settings for Django_Tests project.
 
@@ -37,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # my apps
+    'dt_selenium',
 ]
 
 MIDDLEWARE_CLASSES = [
