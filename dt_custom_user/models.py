@@ -3,8 +3,10 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
+from tastypie.models import create_api_key
 
 # Create your models here.
+
 
 class CustomUserManager(BaseUserManager):
      
@@ -56,4 +58,4 @@ class CustomUser(AbstractBaseUser):
     def has_module_perms(self, app_label):
 	return True
 
-  
+models.signals.post_save.connect(create_api_key, sender=CustomUser)  

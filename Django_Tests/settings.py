@@ -47,7 +47,18 @@ INSTALLED_APPS = [
     # my apps
     'dt_custom_user',
     'dt_selenium',
+    'dt_push_notification_mobiles',
+    'dt_api',
+
+    # externals apss
+    'push_notifications',
+    'tastypie',
 ]
+
+PUSH_NOTIFICATIONS_SETTINGS = {
+    'GCM_API_KEY': 'AIzaSyDUaPBDgpfRKlqn9ct71Lu-D1Lu8GjPA0E',
+    'APNS_CERTIFICATE': '', 
+}
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
